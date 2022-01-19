@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NYILAI&trade; Product : Model Deployment</title>
+    <meta name="keywords" content="NYILAI, categorizing, example, python, web deploy, CNN, Effecientnet">
+    <meta name="description" content="This page provides an example for supervised learning(classification) using uploaded X-Ray Image ">
+    <meta name="author" content="NYILAI B.M.Afshari">
+</head>
+<body bgcolor="#FFE5CC">
+
+<div style="text-align: center;"> <b> Educational Demo </b><br> <a href="https://nyailabandinstitute.com/">
+    <img src="https://nyailabandinstitute.com/wp-content/uploads/2021/04/nyilai.png"
+         title="New York Institute and Laboratory for Artificial Intelligence" alt="NYILAI">
+    </a> <br> </div>
+
+    <span style="color: #a52a2a; ">
+        <h1> Deep Learning- Supervised Learning for Covid19 Detection using X-Ray images</h1></span>
+
+<NOBR>
+    <hr width="1200", align="left", size="10", noshade="noshade", color="darkblue">
+    <font face="Arial">
+
+
+
+
+
+<script>
+</font>
+</script>
+
+
+<table >
+    <td> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+    <td> &nbsp</td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </td><td> </td> <tr>
+
+    <td rowspan="3" valign="center" > This is an educational demo, and we have used Python, Flask, and Heroku. It is a supervised
+Deep Learning Model (DLM) with 800 X-Ray chest images. This DLM predicts the
+probability of Covid-19 based on the dataset..
+        <br>
+        <br>
+    </td></tr>
+</table>
+
+</body>
+</html>
+</tr>
+
+
+
+    <form method=post enctype=multipart/form-data><br>
+        <input type="radio" id="rad1" name="radiob" value="upload" onclick="show()" checked>
+        <label for="rad1" > Uploading a file from your computer </label>
+        <input type=file name=file id="filebutt"> <br>
+        <input type="radio" id="rad2" name="radiob" value="rand" onclick="hide()">
+        <label for="rad2" > Choose a random image from database </label> <br>
+        <input type=submit value=Predict>
+    </form>
+<br>
+{{ outputtext }}
+<br> We povide a big database of X-Ray. You can try images from this website
+<a href="https://drive.google.com/drive/folders/141RbdyIR0S_gFyxw-PZxVrutF88EPG6Z?usp=sharing" target="_blank"> Image source </a>
+<br>or you can try random images which we provides as an example.
+<br>
+
+<img src="{{image}}" align="middle" />
+<script>
+
+function show(){
+ document.getElementById("filebutt").style.visibility = "visible";
+}
+
+function hide(){
+ document.getElementById("filebutt").style.visibility = "hidden";
+}
+
+</script>
+
