@@ -2,7 +2,8 @@ import os
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 #https://www.kaggle.com/tawsifurrahman/covid19-radiography-database
-import cv2
+#import cv2
+#import matplotlib.image as mpimg
 import random
 from keras.models import load_model
 import numpy as np
@@ -42,8 +43,10 @@ def upload_file():
         if whichone == "upload":
             completeadd =os.path.join(app.config['UPLOAD_FOLDER'], "save.fil")
             file.save(completeadd)
-        fileimage = cv2.imread(completeadd, 1)
-        image1=cv2.resize(fileimage, (260, 260)).reshape(1,260,260,3)
+#        fileimage = cv2.imread(completeadd, 1)
+            fileimage = Image.open(completeadd)
+#         fileimage = mpimg.imread('g4g.png')       
+        image1=fileimage.resize((260, 260)).reshape(1,260,260,3)
         b = inputmodel.predict(image1)
         ind = np.argmax(b[0][:])
         p=round(b[0][ind]*100,1)
