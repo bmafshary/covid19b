@@ -35,8 +35,8 @@
     <td> &nbsp</td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </td><td> </td> <tr>
 
     <td rowspan="3" valign="center" > This is an educational demo, and we have used Python, Flask, and Heroku. It is a supervised
-Deep Learning Model (DLM) with 800 X-Ray chest images. This DLM predicts the
-probability of Covid-19 based on the dataset..
+Deep Learning Model (DLM) with 800 X-Ray chest images.
+        <br>This DLM predicts the probability of Covid-19 based on the dataset..
         <br>
         <br>
     </td></tr>
@@ -49,10 +49,10 @@ probability of Covid-19 based on the dataset..
 
 
     <form method=post enctype=multipart/form-data><br>
-        <input type="radio" id="rad1" name="radiob" value="upload" onclick="show()" checked>
+        <input type="radio" id="rad1" name="radiob" value="upload" onclick="show()"  >
         <label for="rad1" > Uploading a file from your computer </label>
         <input type=file name=file id="filebutt"> <br>
-        <input type="radio" id="rad2" name="radiob" value="rand" onclick="hide()">
+        <input type="radio" id="rad2" name="radiob" value="rand" onclick="hide()" checked>
         <label for="rad2" > Choose a random image from database </label> <br>
         <input type=submit value=Predict>
     </form>
@@ -75,4 +75,3 @@ function hide(){
 }
 
 </script>
-
