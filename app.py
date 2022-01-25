@@ -11,7 +11,7 @@ random.seed()
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static'
-databasefolder = 'static'
+#databasefolder = 'static'
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -27,9 +27,9 @@ def upload_file():
     if request.method == 'POST':
         file = request.files["file"]
         whichone = request.form["radiob"]
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-        filelist1 = os.listdir(databasefolder)
+#        if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        filelist1 = os.listdir(app.config['UPLOAD_FOLDER'])
 
         if whichone == "rand":
             rand_image = random.choice(filelist1)
@@ -43,7 +43,9 @@ def upload_file():
             image1=image0.convert('L')
         image2 = image1.resize((260, 260))
         image3=np.zeros((1,260,260,3))
-        image3[0,:,:,0]=image2
+        image3[0,:,:,0]=np.array(image2)
+        image3[0, :, :, 1] = np.array(image2)
+        image3[0, :, :, 2] = np.array(image2)
         b = inputmodel.predict(image3)
         ind = np.argmax(b[0][:])
         p=round(b[0][ind]*100,1)
