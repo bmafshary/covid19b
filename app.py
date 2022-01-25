@@ -24,7 +24,7 @@ def upload_file():
     completeadd = ""
     b=""
     p=0
-    
+
     if request.method == 'POST':
         file = request.files["file"]
         whichone = request.form["radiob"]
@@ -38,8 +38,11 @@ def upload_file():
             image1 = Image.open(completeadd)
         if whichone == "upload":
             completeadd = os.path.join(app.config['UPLOAD_FOLDER'], "save.fil")
-            file = request.files["file"]
-            file.save(completeadd)
+            #file = request.files["file"]
+            if (file):
+                file.save(completeadd)
+            else:
+                completeadd = os.path.join(app.config['UPLOAD_FOLDER'], "Sample_NYILAI (12).png")
             image0 = Image.open(completeadd)
             image1=image0.convert('L')
         image2 = image1.resize((260, 260))
