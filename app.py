@@ -24,6 +24,7 @@ def upload_file():
     completeadd = ""
     b=""
     p=0
+    
     if request.method == 'POST':
         file = request.files["file"]
         whichone = request.form["radiob"]
