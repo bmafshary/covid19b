@@ -34,10 +34,13 @@ def upload_file():
         if whichone == "rand":
             rand_image = random.choice(filelist1)
             completeadd = os.path.join(app.config['UPLOAD_FOLDER'], rand_image)
+            image1 = Image.open(completeadd)
         if whichone == "upload":
             completeadd = os.path.join(app.config['UPLOAD_FOLDER'], "save.fil")
+            file = request.files["file"]
             file.save(completeadd)
-        image1 = Image.open(completeadd)
+            image0 = Image.open(completeadd)
+            image1=image0.convert('L')
         image2 = image1.resize((260, 260))
         image3=np.zeros((1,260,260,3))
         image3[0,:,:,0]=image2
@@ -47,7 +50,7 @@ def upload_file():
 
         predtex = ["COVID 19 symptom", "Lung Opacity symptom", " normal lung", "Viral Pneumonia symptom"]
         txt = "Based on the modeling, X-Ray images belongs to a patient who has " + predtex[ind] + " by the probability of " + str(p) + " percent"
-    return render_template("index.html", outputtext=txt, image=completeadd,x="")
+    return render_template("index.html", outputtext=txt, image=completeadd)
 
 
 if __name__ == '__main__':
