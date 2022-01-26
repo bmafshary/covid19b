@@ -54,8 +54,8 @@ def upload_file():
         ind = np.argmax(b[0][:])
         p=round(b[0][ind]*100,1)
 
-        predtex = ["COVID 19 symptom", "Lung Opacity symptom", " normal lung", "Viral Pneumonia symptom"]
-        txt = "Based on the modeling, X-Ray images belongs to a patient who has " + predtex[ind] + " by the probability of " + str(p) + " percent"
+        predtex = ["COVID 19", "Lung Opacity", " normal", "Viral Pneumonia"]
+        txt = "X-ray image is " + predtex[ind] + " with the probability of " + str(p) + " percent"
     return render_template("index.html", outputtext=txt, image=completeadd)
 
 
