@@ -15,55 +15,57 @@
     </a> <br> </div>
 
     <span style="color: #a52a2a; ">
-        <h1> Deep Learning- Supervised Learning for Covid19 Detection using X-Ray images</h1></span>
+        <h1> EfficientNetV1- Convolutional Neural Network Architecture<br> for Covid-19 Detection using X-ray images</h1></span>
 
 <NOBR>
-    <hr width="1200", align="left", size="10", noshade="noshade", color="darkblue">
+    <hr width=600", align="left", size="10", noshade="noshade", color="darkblue">
     <font face="Arial">
-
-
-
-
-
-<script>
-</font>
-</script>
-
-
-<table >
-    <td> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-    <td> &nbsp</td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </td><td> </td> <tr>
-
-    <td rowspan="3" valign="center" > This is an educational demo, and we have used Python, Flask, and Heroku. It is a supervised
-Deep Learning Model (DLM) with 800 X-Ray chest images. This DLM predicts the
-probability of Covid-19 based on the dataset..
-        <br>
-        <br>
-    </td></tr>
-</table>
-
-</body>
+    </body>
 </html>
 </tr>
 
-
+We have built this medical application for<wbr>research and educational purposes only.
 
     <form method=post enctype=multipart/form-data><br>
-        <input type="radio" id="rad1" name="radiob" value="upload" onclick="show()" checked>
-        <label for="rad1" > Uploading a file from your computer </label>
-        <input type=file name=file id="filebutt"> <br>
-        <input type="radio" id="rad2" name="radiob" value="rand" onclick="hide()">
-        <label for="rad2" > Choose a random image from database </label> <br>
-        <input type=submit value=Predict>
+        <h3>
+<table>
+    <tr>
+        <td><label for="rad1" > Uploading a file from your computer </label></td>
+        <td><input type="radio" id="rad1" name="radiob" value="upload" onclick="show()" checked ></td>
+        <td><input type=file name=file id="filebutt"></td>
+    </tr>
+    <tr>
+        <td><label for="rad2" > Choose a random image from database </label></td>
+        <td><input type="radio" id="rad2" name="radiob" value="rand" onclick="hide()" >
+    </tr>
+        <td><input type=submit value=Predict></td>
+</table>
+            </h3>
     </form>
 <br>
+<b>
 {{ outputtext }}
-<br> We povide a big database of X-Ray.<wbr> You can try images from this website
-<a href="https://drive.google.com/drive/folders/141RbdyIR0S_gFyxw-PZxVrutF88EPG6Z?usp=sharing" target="_blank"> Image source </a>
-<br>or you can try random images which we provides as an example.
+    </b>
+In this application, you can upload your X-ray image or try
+images from the website=>
+<a href="https://drive.google.com/drive/folders/141RbdyIR0S_gFyxw-PZxVrutF88EPG6Z?usp=sharing" target="_blank"> Image Source </a>
 <br>
 
-<img src="{{image}}" align="middle" />
+<h4>
+In this application,<wbr> you can upload your X-ray image<wbr> or try images from the
+website <wbr>
+ <wbr>We have developed this application<wbr> and used EfficientNetV1-Convolutional Neural Network Architecture<wbr>
+by using <a href="https://www.kaggle.com/tawsifurrahman/covid19-radiography-database dataset" target="_blank"> https://www.kaggle.com/tawsifurrahman/covid19-radiography-database dataset </a> <wbr>dataset and classified Chest X-ray images into<wbr> four classes<br>(COVID-19 positive, Normal, Viral Pneumonia, and Lung Opacity)
+</h4>
+<wbr>
+<img src="{{image}}" align="middle"  alt=""/>
+<wbr>
+<video autoplay loop muted>
+ <source src="https://nyailabandinstitute.com/wp-content/uploads/2021/08/Educational-Demo-N2.webm" type="video/mp4">
+</video>
+
+<br><b> Research Professor Mohammad Khoshnevisan,<wbr> Eng Behzad Mohasel Afshari,<wbr> and Professor Kosrow Dehnad</b>
+<br>
 <script>
 
 function show(){
@@ -75,4 +77,3 @@ function hide(){
 }
 
 </script>
-
