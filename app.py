@@ -55,7 +55,7 @@ def upload_file():
         p=round(b[0][ind]*100,1)
 
         predtex = ["COVID 19", "Lung Opacity", " normal", "Viral Pneumonia"]
-        txt = "X-ray image is " + predtex[ind] + " with the probability of " + str(p) + " percent"
+        txt = "X-ray image is " + predtex[ind] + " with the probability of " + str(p) + " %"
     return render_template("index.html", outputtext=txt, image=completeadd)
 
 
