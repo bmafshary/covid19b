@@ -6,7 +6,7 @@ import random
 from keras.models import load_model
 import numpy as np
 from PIL import Image
-inputmodel = load_model('cov200.h5')
+inputmodel = load_model('covidinf.h5')
 random.seed()
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 app = Flask(__name__)
