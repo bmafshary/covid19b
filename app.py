@@ -52,7 +52,7 @@ def upload_file():
         image3[0, :, :, 2] = np.array(image2)
         b = inputmodel.predict(image3)
         ind = np.argmax(b[0][:])
-        p=round(b[0][ind]*100,1)
+        p=round(b[0][ind]*100-0.05,1)
 
         predtex = ["COVID 19", "Lung Opacity", " normal", "Viral Pneumonia"]
         txt = "X-ray image is " + predtex[ind] + " with the probability of " + str(p) + " percent"
