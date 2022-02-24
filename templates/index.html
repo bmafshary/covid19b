@@ -7,84 +7,76 @@
     <meta name="description" content="This page provides an example for supervised learning(classification) using uploaded X-Ray Image ">
     <meta name="author" content="NYILAI B.M.Afshari">
 </head>
+
 <body bgcolor="#FFE5CC">
 
-<div style="text-align: center;"> <b> Educational Demo </b><br> <a href="https://nyailabandinstitute.com/">
+<div style="text-align: center;"> <b><br> Educational Demo<br>
+
+<pre>
+</pre>
+</b><br> <a href="https://nyailabandinstitute.com/">
     <img src="https://nyailabandinstitute.com/wp-content/uploads/2021/04/nyilai.png"
          title="New York Institute and Laboratory for Artificial Intelligence" alt="NYILAI">
     </a> <br> </div>
 
     <span style="color: #a52a2a; ">
-        <h1> EfficientNetV1- Convolutional<wbr> Neural Network Architecture<wbr> for Covid-19 Detection <wbr> using X-ray images</h1></span>
-
+        <h1> EfficientNetV1- Convolutional Neural Network Architecture<br> for Covid-19 Detection using X-ray images</h1></span>
 <NOBR>
     <hr width=600", align="left", size="10", noshade="noshade", color="darkblue">
     <font face="Arial">
     </body>
 </html>
 </tr>
-<h4>
-<b>
-We have built this medical application for<wbr>research and educational purposes only.
-</b>
-</h4>
+<b>We have built this medical application for <wbr>research & educational purposes only.</b>
+
     <form method=post enctype=multipart/form-data><br>
-        <h3>
+        <h2>
 <table>
     <tr>
-        <td><label for="rad1" > Upload an X-ray image from your computer </label></td>
+        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+        <td><label for="rad1" > Option 1 : Upload an X-ray image<wbr> from your computer </label></td>
         <td><input type="radio" id="rad1" name="radiob" value="upload" onclick="show()" checked ></td>
         <td><input type=file name=file id="filebutt"></td>
     </tr>
     <tr>
-        <td><label for="rad2" > Choose a random X ray image from the  image source </label></td>
+        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+        <td><label for="rad2" > Option 2 : Choose a random image<wbr> from the Image Source </label></td>
         <td><input type="radio" id="rad2" name="radiob" value="rand" onclick="hide()" >
     </tr>
+    <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
         <td><input type=submit value=Predict></td>
 </table>
-            </h3>
+            </h2>
     </form>
 <br>
-<b>
-
 <h3><span style="color: red; ">
-&nbsp&nbsp&nbsp&nbsp&nbsp {{ outputtext }} </h3> </span>
+&nbsp&nbsp&nbsp&nbsp&nbsp{{ outputtext }}</h3></span>
     <h5>
-    <br>&nbsp&nbsp&nbsp&nbsp&nbsp[1]. Save the images from <a href="https://drive.google.com/drive/folders/141RbdyIR0S_gFyxw-PZxVrutF88EPG6Z?usp=sharing">  Image Source  </a>
-    <br>&nbsp&nbsp&nbsp&nbsp&nbsp[2]. Upload the Image in this application.
+    <br>&nbsp&nbsp&nbsp&nbsp&nbsp[1]. Save the X-ray images from <a href="https://drive.google.com/drive/folders/141RbdyIR0S_gFyxw-PZxVrutF88EPG6Z?usp=sharing" target="_blank">  Image Source  </a>
+    <br>&nbsp&nbsp&nbsp&nbsp&nbsp[2]. Upload the X-ray in this application.
     <br>&nbsp&nbsp&nbsp&nbsp&nbsp[3]. Press Predict.</h5>
-
-
-</h2>
+<wbr>
 
 <h4>
-
-
-
-We have developed this application <wbr> and used EfficientNetV1-Convolutional <wbr>Neural Network Architectureby <wbr> using X-ray images from  dataset 
-(
-
- <a href="https://www.kaggle.com/" target="_blank"> www.kaggle.com)</a> <wbr>and classified Chest X-ray Images into<wbr> four classes<br>(COVID-19 positive, Normal, Viral Pneumonia, and Lung Opacity)
-
-
+ <wbr>&nbsp&nbsp&nbsp&nbsp&nbsp EfficientNetV1-Convolutional Neural Network Architecture<wbr> using X-ray images
+    (<a href="https://www.kaggle.com" target="_blank">www.kaggle.com</a> )<br>
+     &nbsp&nbsp&nbsp&nbsp&nbsp Classified Chest X-ray images into COVID-19 <wbr>Positive, Normal, Viral Pneumonia, and Lung Opacity
 </h4>
-<table>
-<td><img src="{{image}}" align="middle"  alt=""  height="260" ></td>
+<tr>
+    <table>
+            <td><img src="{{image}}" align="middle"  alt="" ></td>
         <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
             <td>
-            <video autoplay loop muted width="260" height="260">
+            <video autoplay loop muted width="299" height="299">
              <source src="https://nyailabandinstitute.com/wp-content/uploads/2021/08/Educational-Demo-N2.webm" type="video/mp4" >    </video>
         </td>
         <br>
 </table>
-
-<h4>
-<br><b> Research Professor Mohammad Khoshnevisan<br>
- Eng Behzad Mohasel Afshari<br>
- Professor Kosrow Dehnad</b>
+<h4> &nbsp Research Professor Mohammad Khoshnevisan
+    <br> &nbsp Eng Behzad Mohasel Afshari
+    <br> &nbsp Professor Kosrow Dehnad
 <br>&nbsp <a href="https://nyailabandinstitute.com/about-nyilai/" target="_blank">  About NYILAI</a>
-
-<br></h4>
+    </h4>
 <script>
 
 function show(){
